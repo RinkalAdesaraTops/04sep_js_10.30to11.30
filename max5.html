@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 10;
+        let b = 20;
+        let c = 30;
+        let d = 40;
+        let e = 50;
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {
+                    if (a > e) {
+                        document.write('a is maximum')
+                    } else {
+                        document.write('e is maximum')
+                    }
+                } else {
+                    if(d>e){
+                        document.write('<br> d is max')
+                    } else {
+                        document.write('<br> e is max')
+                    }
+                }
+
+            } else {
+                if(c>d){
+                    if(c>e){
+                        document.write('<br> c is max')
+                    } else {
+                        document.write('<br> e is max')
+
+                    }
+                } else {
+                    if(d>e){
+                        document.write('<br> d is max')
+
+                    } else {
+                        document.write('<br> e is max')
+
+                    }
+                }
+            } 
+        } else {
+            if(b>c){
+                if(b>d){
+                    if(b>e){
+                        document.write('<br> b is max')
+
+                    } else {
+                        document.write('<br> e is max')
+
+                    }
+                } else {
+                    if(d>e){
+                        document.write('<br> D is max')
+                    } else {
+                        document.write('<br> e is max')
+
+                    }
+                }
+            } else {
+                if(c>d){
+                    if(c>e){
+                        document.write('<br> c is max')
+
+                    } else {
+                        document.write('<br> e is max')
+
+                    }
+                } else {
+                    if(d>e){
+                        document.write('<br> D is max')
+                    } else {
+                        document.write('<br> e is max')
+
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
