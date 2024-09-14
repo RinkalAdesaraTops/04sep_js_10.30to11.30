@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sum of 1 to 10 1+2+3+4...+10
+        let i=1;
+        let sum=0
+        let m=1
+        while(i<=5){
+            sum += i
+            m *= i
+            //sum = sum+i //sum=0+1=1  1+2 = 3 3+3=6 6+4=10
+            i++;
+        }
+        document.write("<br> Addition is "+sum);
+        document.write("<br> Multiplication is "+m);
+        
+    </script>
+</body>
+</html>
