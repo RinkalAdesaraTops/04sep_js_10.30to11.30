@@ -6,6 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        //array -- collection of data with same datatype
+        let arr = [10,20,33,44,55]
+        console.log(arr[0]); //index/position
+        console.log(arr[3]); //index/position
+        //last positionwise - add-push() delete-pop()
+        document.write('<br> -------------Last position add & delete-----')
+        arr.push(100)
+        document.write('<br> push 100 --'+arr)
+        arr.push(220)
+        document.write('<br> push 220 ---'+arr)
+        arr.pop()
+        document.write('<br> '+arr)
+
+        document.write('<br> -------------First position add & delete-----')
+        arr.unshift(555)
+        document.write('<br> '+arr)
+        arr.shift()
+        document.write('<br> '+arr)
+        
+        document.write('<br> -------------Middle position add & delete-----')
+        arr.splice(2,0,56,67,78,99,111)
+        document.write('<br> '+arr)
+        arr.splice(4,3)
+        document.write('<br> '+arr)
+        document.write('<br> -------------Slice-positionwise get -----')
+        let a1=arr.slice(3)
+        document.write('<br> '+a1)
+         a1=arr.slice(3,7)
+        document.write('<br> '+a1)
+        a1=arr.slice(-3)
+        document.write('<br> '+a1)
+
+        a1=arr.slice(-6,-2)
+        document.write('<br> '+a1)
+
+        let arr2 = [11,22,33,44]
+        arr2.splice(0,1,55,66) //55,66,22,33,44
+    </script>
 </body>
 </html>

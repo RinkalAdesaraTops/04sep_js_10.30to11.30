@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,30,40,50,20]
+        //map function
+        let result = arr.map((i,index)=>{ //array ni copy create karshe
+            return i*2;
+            // console.log(i);
+            // console.log("index is "+index);
+        })
+        console.log(result);
+        let res = arr.forEach((i,index)=>{ //no return any value
+             console.log(i);
+            console.log("index is "+index);
+            //return i*3;
+        })
+        //console.log(res);
+        let arr_new = [23,24,12,11,50,6]
+        let search = arr_new.filter((i)=>{
+            return i%2!=0 //even no
+        })
+        console.log(search); 
+
+        search = arr.find((i)=>{
+            return i==200
+        })
+        console.log(search);
+
+        //includes
+        let r1 = arr.includes(205)
+        console.log("include function -- "+r1);
+        
+        //reduce function
+        let answer = arr.reduceRight((total,a)=>{
+            console.log("total is "+total);
+            console.log("a is "+a);
+            return total-a
+        },22)
+        console.log("Answer is "+answer);
+        //findout maximum value from array using reduce function
+
+        let add = arr_new.reduce((curr,max)=>{ //[23,24,12,11,50,6]
+                if(curr>max){ //curr=23 max=24 24>12 max=24
+                    max=curr //11>24 50>24 6>24 max=50 6>50
+                }
+                return max;
+        })
+        console.log("Maximum value is "+add);
+        
+    </script>
+</body>
+</html>

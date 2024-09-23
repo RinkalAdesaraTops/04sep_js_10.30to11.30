@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo1" class="abc"></div>
+    <p id="txt">This is text</p>
+    <p class="abc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam sequi minima recusandae enim aliquid illum deserunt, placeat blanditiis unde? A impedit libero beatae ratione consequuntur modi esse obcaecati nam iure!</p>
+    <p class="abc">gfkhj kfghfkgh </p>
+    <p class="abc">gfkhj kfghfkgh </p>
+    <p>gfkhj kfghfkgh </p>
+    <p class="abc">bmbnmmbnmb cbvbcv </p>
+    <p>gfkhj kfghfkgh </p>
+    <script>
+        document.getElementById('demo').innerHTML = "<b>Hello</b>"
+        document.getElementById('demo1').innerText = "<b>Hello</b>"
+        document.getElementById('txt').style.color = "red"
+        document.getElementById('txt').style.backgroundColor = "yellow"
+
+        let ans = document.getElementsByTagName("p")
+        for(let i=0;i<ans.length;i++){
+            if((i+1)%2==0){ //01 12 23 34 45 56 67 
+                ans[i].style.color="blue"
+            } else {
+                ans[i].style.color="brown"
+            }
+        }
+        let res = document.getElementsByClassName("abc")
+        for(let i=0;i<res.length;i++){
+            if((i+1)%2==0){ //01 12 23 34 45 56 67 
+                res[i].style.color="pink"
+            } else {
+                res[i].style.color="yellowgreen"
+            }
+        }
+        // console.log(ans);
+       // document.getElementsByTagName("p")[2].style.color="blue"
+    </script>
+</body>
+</html>
