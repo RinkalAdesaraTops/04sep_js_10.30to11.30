@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr ={
+            name:"Test",
+            age:24,
+            roll_no:101,
+            salary:35000,
+            display:function(){
+                return this.name+'-----'+this.age
+            }
+
+        }
+        // document.write('<br> Name is '+arr['name'])
+        // document.write('<br> Age is '+arr.age)
+        // for(let x in arr){
+        //     document.write('<br> '+x+' is '+arr[x])
+        // }
+        document.write('<br> Name&age is '+arr.display())
+    </script>
+</body>
+</html>
