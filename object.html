@@ -7,15 +7,21 @@
 </head>
 <body>
     <script>
-        let arr ={
+        let arr = {
             name:"Test",
             age:24,
             roll_no:101,
             salary:35000,
             display:function(){
                 return this.name+'-----'+this.age
+            },
+            //getter & setter method
+            get dispRollno(){
+                return this.roll_no
+            },
+            set setRollNo(rno){
+                this.roll_no = rno
             }
-
         }
         // document.write('<br> Name is '+arr['name'])
         // document.write('<br> Age is '+arr.age)
@@ -23,6 +29,10 @@
         //     document.write('<br> '+x+' is '+arr[x])
         // }
         document.write('<br> Name&age is '+arr.display())
+        document.write('<br> Rollno is '+arr.dispRollno)
+        arr.setRollNo = 111
+        document.write('<br> New Rollno is '+arr.roll_no)
+
     </script>
 </body>
 </html>
