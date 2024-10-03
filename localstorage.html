@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Localstorage Demo</h3>
+    <div id="demo"></div>
+    <button onclick="addData()">Add Data</button>
+    <button onclick="dispData()">Display Data</button>
+    <button onclick="delName()">Clear Name</button>
+    <button onclick="clearAll()">Clear All</button>
+    <script>
+        const addData = ()=>{
+            //add data in localstorage
+            localStorage.setItem('name',"fsdfsdf")
+            localStorage.setItem('age',"25")
+            localStorage.setItem('salary',"25000")
+        }
+        const dispData = ()=>{
+            let nm = localStorage.getItem('name')
+            let age = localStorage.getItem('age')
+            let sal = localStorage.getItem('salary')
+            document.getElementById('demo').innerHTML = "Name is "+nm+"-- Age is "+age+"=== Salary is "+sal
+        }
+        const delName = ()=>{
+            localStorage.removeItem('name')
+        }
+        const clearAll = ()=>{
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>

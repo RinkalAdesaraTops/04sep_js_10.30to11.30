@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="userfrm">
+        <label for="">Name:</label>
+        <input type="text" name="uname" id="name"><br>
+        <label for="">Age:</label>
+        <input type="number" name="age" id="age"><br>
+        <input type="button" value="Save" onclick="saveData()"> 
+    </form>
+    <script src="jquery-3.7.1.js"></script>
+<script>
+let data = [];
+const saveData = ()=>{
+   let getData =localStorage.getItem('userdata')
+   let result = JSON.parse(getData)
+   console.log(result);
+   
+   let len = result!=null && result.length > 0  ? result.length+1:1
+    let nm = $("input[name='uname']").val();
+    let age = $("#age").val()
+    let obj = {
+        id:len,
+        name:nm,
+        age:age
+    }
+    data.push(obj)
+    localStorage.setItem('userdata',JSON.stringify(data))
+    
+    // let nm = document.getElementById("name").value;
+    // let age = document.userfrm.age.value;
+    // localStorage.setItem('name',nm)
+    // localStorage.setItem('age',age)  
+    // let arr = [nm,age] 
+}
+</script>
+</body>
+</html>
