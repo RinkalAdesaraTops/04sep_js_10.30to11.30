@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class object inheritance polymorphism constructor super this extends 
+        class baseclass{ //super class,parent class
+            //encapsulation -- wrapping up of data into single unit
+            constructor(p){
+                this.a = p
+                console.log('parent class called...');
+            }
+            disp(){
+                console.log('<br> base class disp func called...')
+            }
+        }
+        class deriveclass extends baseclass{ //sub class child 
+            constructor(){
+                super()
+                console.log('child class called...');                
+            }
+            disp(){               
+                console.log('<br> child class disp func called...')
+                super.disp()
+            }
+        }
+        let obj = new deriveclass()
+        obj.disp()
+        // obj.disp1()
+        //abstraction - hiding - access specifier - public private protected
+    </script>
+</body>
+</html>

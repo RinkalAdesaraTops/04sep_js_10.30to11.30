@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        class abc{
+            //this keyword -- current value /current object
+            //scope -- particular class 
+            //member variable & member function
+            constructor(p,q){
+                this.a = p
+                this.b = q
+                this.add = this.add.bind(this)
+            }
+            add = ()=>{
+                // this.a=10
+                console.log("addition is "+(this.a+this.b));               
+            }
+            minus = ()=>{
+                console.log("Minus is "+(this.a-this.b));               
+                //console.log("b is "+this.a);               
+            }
+        }
+        let obj = new abc(35,25)
+        obj.add()
+        obj.minus()
+    </script>
+</body>
+</html>
